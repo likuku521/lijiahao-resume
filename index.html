@@ -65,7 +65,11 @@
    Reset
    ═══════════════════════════════════════════════════════════ */
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;   /* 氛围层 fixed 光晕宽度超出视口，此处裁掉避免横向滚动 */
+}
 body {
   font-family: var(--font-sans);
   font-size: 16px;
